@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "sonner";
 
@@ -47,6 +48,11 @@ export default function RootLayout({
       <body className={`${pretendard.variable} antialiased`}>
         {children}
         <Toaster position="top-right" />
+        <Script
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          strategy="afterInteractive"
+          async
+        />
       </body>
     </html>
   );

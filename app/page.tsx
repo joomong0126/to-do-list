@@ -660,7 +660,7 @@ export default function TodoApp() {
                   <ins 
                     className="kakao_ad_area" 
                     style={{display: 'none'}}
-                    data-ad-unit="DAN-RWGyLOJkr2nlo1Ej"
+                    data-ad-unit="DAN-QTOYowsWYcssqyNn"
                     data-ad-width="300"
                     data-ad-height="250"
                   />
