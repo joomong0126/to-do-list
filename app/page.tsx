@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
+import { BuyMeCoffee, BuyMeCoffeeFloating } from '@/components/ui/buy-me-coffee'
 import { supabase, type Todo } from '@/lib/supabase'
 import { toast } from 'sonner'
 
@@ -257,20 +258,43 @@ export default function TodoApp() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Badge variant="outline" className="text-xs">
-                {todayTodos.length}개 오늘 추가
-              </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {activeCount}개 진행중
-              </Badge>
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" title="Supabase 연결됨"></div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Badge variant="outline" className="text-xs">
+                  {todayTodos.length}개 오늘 추가
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  {activeCount}개 진행중
+                </Badge>
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" title="Supabase 연결됨"></div>
+              </div>
+              {/* Header Support Button */}
+              <div className="hidden md:block">
+                <BuyMeCoffee />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto p-4 pt-8">
+        {/* Support Section - Mobile */}
+        <div className="flex justify-center mb-8 md:hidden">
+          <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border border-white/20 shadow-xl rounded-2xl p-6 w-full max-w-md">
+            <div className="text-center mb-4">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                이 프로젝트가 도움이 되었나요?
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                개발자에게 커피 한 잔으로 응원을 보내주세요! ☕
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <BuyMeCoffee />
+            </div>
+          </div>
+        </div>
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 border-blue-200/50">
@@ -626,6 +650,24 @@ export default function TodoApp() {
               </CardContent>
             </Card>
 
+            {/* 카카오 에드핏 광고 */}
+            <Card className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border-white/20 shadow-xl">
+              <CardContent className="p-4">
+                <div className="text-center mb-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">광고</p>
+                </div>
+                <div className="flex justify-center">
+                  <ins 
+                    className="kakao_ad_area" 
+                    style={{display: 'none'}}
+                    data-ad-unit="DAN-RWGyLOJkr2nlo1Ej"
+                    data-ad-width="300"
+                    data-ad-height="250"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+
             <Card className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 border-purple-200/50">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -644,6 +686,9 @@ export default function TodoApp() {
           </div>
         </div>
       </div>
+      
+      {/* Floating Support Button */}
+      <BuyMeCoffeeFloating />
     </div>
   )
 }
