@@ -11,11 +11,11 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "TaskFlow Pro - 스마트한 할 일 관리 플랫폼",
-  description: "현대적이고 세련된 할 일 관리 플랫폼으로 생산성을 높이세요",
+  title: "할 일 목록 앱 - TaskFlow Pro | 무료 To-Do List 웹앱",
+  description: "간편한 할 일 관리 웹앱으로 일정과 목표를 효율적으로 관리하세요! 무료 To-Do List 앱, 실시간 동기화, 카테고리별 정리 기능까지. 지금 바로 시작해보세요!",
   openGraph: {
-    title: "TaskFlow Pro - 스마트한 할 일 관리 플랫폼",
-    description: "현대적이고 세련된 할 일 관리 플랫폼으로 생산성을 높이세요",
+    title: "할 일 목록 앱 - TaskFlow Pro | 무료 To-Do List 웹앱",
+    description: "간편한 할 일 관리 웹앱으로 일정과 목표를 효율적으로 관리하세요! 무료 To-Do List 앱, 실시간 동기화, 카테고리별 정리 기능까지. 지금 바로 시작해보세요!",
     images: [
       {
         url: "/og-image.png",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaskFlow Pro - 스마트한 할 일 관리 플랫폼",
-    description: "현대적이고 세련된 할 일 관리 플랫폼으로 생산성을 높이세요",
+    title: "할 일 목록 앱 - TaskFlow Pro | 무료 To-Do List 웹앱",
+    description: "간편한 할 일 관리 웹앱으로 일정과 목표를 효율적으로 관리하세요! 무료 To-Do List 앱, 실시간 동기화, 카테고리별 정리 기능까지. 지금 바로 시작해보세요!",
     images: ["/og-image.png"],
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),

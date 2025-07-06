@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { BuyMeCoffee, BuyMeCoffeeFloating } from '@/components/ui/buy-me-coffee'
@@ -251,10 +251,10 @@ export default function TodoApp() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                  TaskFlow Pro
+                  효율적인 할 일 목록 웹앱 - TaskFlow Pro
                 </h1>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  스마트한 할 일 관리 플랫폼
+                  무료 To-Do List 앱으로 일정 관리와 작업 목록을 체계적으로 관리하세요
                 </p>
               </div>
             </div>
@@ -283,10 +283,10 @@ export default function TodoApp() {
           <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border border-white/20 shadow-xl rounded-2xl p-6 w-full max-w-md">
             <div className="text-center mb-4">
               <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                이 프로젝트가 도움이 되었나요?
+                이 할 일 관리 앱이 도움이 되었나요?
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                개발자에게 커피 한 잔으로 응원을 보내주세요! ☕
+                To-Do List 앱 개발자에게 커피 한 잔으로 응원을 보내주세요! ☕
               </p>
             </div>
             <div className="flex justify-center">
@@ -367,20 +367,20 @@ export default function TodoApp() {
           <div className="lg:col-span-2">
             <Card className="mb-6 bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border-white/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-xl flex items-center gap-2">
+                <h2 className="text-xl font-semibold flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg>
-                  새로운 할 일
-                </CardTitle>
+                  새로운 할 일 추가 - 간편한 To-Do List 작성
+                </h2>
                 <CardDescription>
-                  오늘 해야 할 일을 추가하고 우선순위를 설정하세요
+                  오늘 해야 할 일정과 작업 목록을 추가하고 우선순위를 설정하세요
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex gap-2">
                   <Input
-                    placeholder="무엇을 해야 하나요?"
+                    placeholder="할 일을 입력하세요 (예: 회의 준비, 보고서 작성)"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
@@ -429,7 +429,7 @@ export default function TodoApp() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <div className="flex-1">
                     <Input
-                      placeholder="할 일 검색..."
+                      placeholder="할 일 목록에서 검색 (작업명, 카테고리 등)"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="bg-white/50 dark:bg-gray-900/50"
@@ -466,12 +466,12 @@ export default function TodoApp() {
             <Card className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border-white/20 shadow-xl">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-xl flex items-center gap-2">
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                     </svg>
-                    할 일 목록
-                  </CardTitle>
+                    할 일 목록 관리 - 스마트한 작업 관리
+                  </h2>
                   {completedCount > 0 && (
                     <Button
                       variant="ghost"
@@ -485,7 +485,7 @@ export default function TodoApp() {
                 </div>
                 <CardDescription>
                   {filteredTodos.length === 0 ? '조건에 맞는 할 일이 없습니다' : 
-                   `${filteredTodos.length}개의 할 일이 있습니다`}
+                   `${filteredTodos.length}개의 작업이 To-Do List에 등록되어 있습니다`}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -495,8 +495,8 @@ export default function TodoApp() {
                       <svg className="w-20 h-20 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <p className="text-xl font-semibold mb-2">할 일이 없습니다</p>
-                      <p className="text-sm opacity-75">새로운 할 일을 추가해보세요!</p>
+                      <p className="text-xl font-semibold mb-2">할 일 목록이 비어있습니다</p>
+                      <p className="text-sm opacity-75">새로운 작업을 추가하여 To-Do List를 시작해보세요!</p>
                     </div>
                   </div>
                 ) : (
@@ -581,12 +581,12 @@ export default function TodoApp() {
           <div className="space-y-6">
             <Card className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border-white/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
+                <h3 className="text-lg font-semibold flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
-                  진행률
-                </CardTitle>
+                  할 일 진행률 추적
+                </h3>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
@@ -631,12 +631,12 @@ export default function TodoApp() {
 
             <Card className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg border-white/20 shadow-xl">
               <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
+                <h3 className="text-lg font-semibold flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  오늘의 할 일
-                </CardTitle>
+                  오늘의 일정 관리
+                </h3>
               </CardHeader>
               <CardContent>
                 <div className="text-center">
@@ -644,7 +644,7 @@ export default function TodoApp() {
                     {todayTodos.length}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    오늘 추가된 할 일
+                    오늘 추가된 작업 목록
                   </p>
                 </div>
               </CardContent>
