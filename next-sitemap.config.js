@@ -15,9 +15,9 @@ module.exports = {
   ],
   
   // 동적 사이트맵 추가 (필요한 경우)
-  additionalPaths: async (config) => [
-    await config.transform(config, '/custom-page'),
-  ],
+  // additionalPaths: async (config) => [
+  //   await config.transform(config, '/custom-page'),
+  // ],
   
   // robots.txt 설정
   robotsTxtOptions: {
@@ -28,9 +28,9 @@ module.exports = {
         disallow: ['/admin', '/api'],
       },
     ],
-    additionalSitemaps: [
-      'https://to-do-list-fawn-nine.vercel.app/sitemap.xml', // 실제 도메인으로 변경
-    ],
+    // additionalSitemaps: [
+    //   'https://to-do-list-fawn-nine.vercel.app/sitemap.xml',
+    // ],
   },
   
   // 페이지별 우선순위 설정
