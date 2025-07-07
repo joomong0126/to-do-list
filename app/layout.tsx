@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Google Search Console verification 코드가 있으면 여기에 추가
-    // google: 'your-google-verification-code',
+    // Google Search Console verification 코드
+    google: 'X_sqXxkLaLe2ZW4Xyjgf-KjKZqYDjqvYUwwHceP3gh4',
   },
 };
 
