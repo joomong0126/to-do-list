@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+
+# Host
+Host: https://to-do-list-fawn-nine.vercel.app
+
+# Sitemaps
+Sitemap: https://to-do-list-fawn-nine.vercel.app/sitemap.xml
